@@ -10,10 +10,10 @@
 }
 
 :root {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: white;
-    --main-color: #00ffee; 
+    --bg-color: #160121;
+    --second-bg-color: #f1a5ad;
+    --text-color: #f9f9f8;
+    --main-color: #cf7793; 
 }
 
 html{
@@ -260,13 +260,78 @@ span{
     text-align: center;
     margin: 5rem 0;
 }
+
+/*about*/
+.about__container{
+    row-gap: 3rem;
+
+}
+
+.about__title {
+    position: relative;
+    color: var(--first-color-light);
+    font-family: 'Planet N Compact', sans-serif;
+}
+
+.about {
+    row-gap: 3rem;
+}
+
+.about__description{
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.about__description b {
+   color: var(--first-color-light);
+}
+
+.about__img{
+    width: 250px;
+    justify-self: center;
+    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%) 60%, transparent 100% );
+    border-radius: 7%;
+}
+
+.edu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--container-color);
+    z-index: -1;
+    transition: .5s;
+    border-radius: 15px;
+}
+.edu:hover::before {
+    width: 100%;
+}
+
+.about__img{
+    place-items: center;
+    transition: transform .4s;
+}
+
+.about__img:hover {
+    transform: translateY(-.50rem);
+}
+
+.about__button {
+    width: 100%;
+}
+
+/*education*/
 .education{
     padding: 100px 15px;
     background: var(--second-bg-color);
 }
+
 .education h2{
     margin-bottom: 5rem;
 }
+
 .timeline-items{
     max-width: 1200px;
     margin: auto;
@@ -274,6 +339,7 @@ span{
     flex-wrap: wrap;
     position: relative;
 }
+
 .timeline-items::before{
     content: "";
     position: absolute;
@@ -282,21 +348,26 @@ span{
     background-color: var(--main-color);
     left: calc(50% - 1px);
 }
+
 .timeline-item{
     margin-bottom: 40px;
     width: 100%;
     position: relative;
 }
+
 .timeline-item:last-child{
     margin-bottom: 0;
 }
+
 .timeline-item:nth-child(odd){
     padding-right: calc(50% + 30px);
     text-align: right;
 }
+
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
 }
+
 .timeline-dot{
     height: 21px;
     width: 21px;
@@ -308,12 +379,14 @@ span{
     border-radius: 50%;
     top: 10px;
 }
+
 .timeline-date{
     font-size: 20px;
     font-weight: 800;
     color: white;
     margin: 6px 0 15px;
 }
+
 .timeline-content{
     background-color: var(--bg-color);
     border: 3px solid var(--main-color);
@@ -323,46 +396,57 @@ span{
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
+
 .timeline-content:hover{
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--main-color);
 }
+
 .timeline-content h3{
     font-size: 20px;
     color: white;
     margin: 0 0 10px;
     font-weight: 500;
 }
+
 .timeline-content p{
     color: white;
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
 }
+
 ::-webkit-scrollbar{
     width: 15px;
 }
+
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
+
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
     width: 50px;
 }
+
+/*Certificates*/
 .certificates{
     background: var(--bg-color);
     color: black;
 }
+
 .certificates h2{
     margin-bottom: 5rem;
     color: white;
 }
+
 .certicates-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 2.5rem;
 }
+
 .certificates-box{
     background-color: var(--main-color);
     height: 300px;
@@ -371,12 +455,14 @@ span{
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
+
 .certificates-box:hover{
     background: white;
     color: black;
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
+
 .certificates-box .certificates-info{
     display: flex;
     flex-direction: column;
@@ -386,11 +472,13 @@ span{
     align-items: baseline;
     padding: 5rem 5rem;
 }
+
 .certificates-info h4{
     font-size: 3rem;
     font-weight: 800;
     line-height: 2;
 }
+
 .certificates-info p{
     font-size: 1.6rem;
     font-weight: 600;
@@ -398,9 +486,12 @@ span{
     line-height: 1.7;
     margin: auto;
 }
+
+/*portfolio*/
 .portfolio{
     background: var(--second-bg-color);
 }
+
 .portolio-box{
     background-size: cover;
     display: flex;
@@ -408,20 +499,24 @@ span{
     justify-content: center;
     flex-direction: column;
 }
+
 .portfolio .heading{
     margin-bottom: 5rem;
 }
+
 .portolio-box img{
     width: 15rem;
     border-radius: 50%;
     border: 3px solid var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
 }
+
 .wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 3rem;
 }
+
 .portfolio-item{
     min-height: 550px;
     max-width: 450px;
@@ -440,24 +535,31 @@ span{
     color: white;
     transition: 0.4s ease-in-out;
 }
+
 .portfolio-item:hover{
     border: 3px solid var(--main-color);
     transform: translateY(-10px)scale(1.03);
     box-shadow: 0 0 50px var(--main-color);
 }
+
 .portfolio-item h2{
     font-size: 2.8rem;
 }
+
 .portfolio-item p{
     font-size: 1.3rem;
 }
+
+/*contact*/
 .contact{
     background-color: var(--bg-color);
 }
+
 .contact h2{
     margin-bottom: 3rem;
     color: white;
 }
+
 .contact form{
     display: flex;
     align-items: center;
@@ -466,11 +568,13 @@ span{
     margin: 5rem auto;
     text-align: center;
 }
+
 .contact form .input-box{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .contact form .input-box input,
 .contact form textarea{
     width: 100%;
@@ -483,9 +587,11 @@ span{
     margin: 1.5rem 0;
     resize: none;
 }
+
 .contact form .btn{
     margin-top: 2rem;
 }
+
 .footer{
     position: relative;
     bottom: 0;
@@ -493,11 +599,13 @@ span{
     padding: 40px 0;
     background-color: var(--second-bg-color);
 }
+
 .footer .social{
     text-align: center;
     padding-bottom: 25px;
     color: var(--main-color);
 }
+
 .footer .social a{
     font-size: 25px;
     color: var(--main-color);
@@ -511,12 +619,14 @@ span{
     margin: 0 10px;
     transition: 0.3s ease-in-out;
 }
+
 .footer .social a:hover{
     transform: scale(1.2)translateY(-10px);
     background-color: var(--main-color);
     color: black;
     box-shadow: 0 0 25px var(--main-color);
 }
+
 .footer ul{
     margin-top: 0;
     padding: 0;
@@ -525,18 +635,22 @@ span{
     margin-bottom: 0;
     text-align: center;
 }
+
 .footer ul li a{
     color: white;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease-in-out;
 }
+
 .footer ul li a:hover{
     border-bottom: 3px solid var(--main-color);
 }
+
 .footer ul li{
     display: inline-block;
     padding: 0 15px;
 }
+
 .footer .copyright{
     margin-top: 50px;
     text-align: center;
